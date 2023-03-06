@@ -1,2 +1,2 @@
 # PersonalPortfolio
-Shawn Logan's Personal Portfolio
+Shawn Logan's Personal Portfolio - ShawnLogan.me
