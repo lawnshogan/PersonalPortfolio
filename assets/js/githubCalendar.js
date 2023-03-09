@@ -1,5 +1,6 @@
 GitHubCalendar(".calendar", "LawnShogan", {
   proxy: function(username) {
+    console.log('Fetching events for username:', username);
     return fetch(`https://thingproxy.freeboard.io/fetch/https://api.github.com/users/${username}/events/public`)
       .then(function(response) {
         if (!response.ok) {
@@ -13,7 +14,7 @@ GitHubCalendar(".calendar", "LawnShogan", {
       });
   }
 }).then(function(events) {
-  console.log(events);
+  console.log('Fetched events:', events);
 }).catch(function(error) {
   console.error('Unhandled error:', error);
 });
