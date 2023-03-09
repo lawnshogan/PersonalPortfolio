@@ -1,6 +1,6 @@
 GitHubCalendar(".calendar", "LawnShogan", {
   proxy: function(username) {
-    return fetch(`https://cors-anywhere.herokuapp.com/https://api.github.com/users/${username}/events/public`)
+    return fetch(`https://thingproxy.freeboard.io/fetch/https://api.github.com/users/${username}/events/public`)
       .then(function(response) {
         if (!response.ok) {
           throw new Error('Network response was not ok');
