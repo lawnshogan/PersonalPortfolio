@@ -9,10 +9,11 @@ GitHubCalendar(".calendar", "LawnShogan", {
       })
       .catch(function(error) {
         console.error('Error fetching GitHub events:', error);
+        throw error;
       });
   }
 }).then(function(events) {
   console.log(events);
 }).catch(function(error) {
-  console.error(error);
+  console.error('Unhandled error:', error);
 });
