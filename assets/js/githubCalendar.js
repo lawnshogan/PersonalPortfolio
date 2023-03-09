@@ -1,6 +1,6 @@
 GitHubCalendar(".calendar", "LawnShogan", {
   proxy: function(username) {
-    return fetch(`https://cors-anywhere.herokuapp.com/https://github.com/${LawnShogan}`)
+    return fetch(`https://cors-anywhere.herokuapp.com/https://github.com/${username}`)
   }
 }).then(function(response) {
   return response.text();
