@@ -15,6 +15,7 @@ GitHubCalendar(".calendar", "LawnShogan", {
   }
 }).then(function(events) {
   console.log('Fetched events:', events);
+  return events;
 }).catch(function(error) {
   console.error('Unhandled error:', error);
 });
