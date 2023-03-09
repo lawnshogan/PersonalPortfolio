@@ -1,11 +1,11 @@
-GitHubCalendar(".calendar", "LawnShogan");
-          
-// or enable responsive functionality:
-GitHubCalendar(".calendar", "LawnShogan", { responsive: true });
-
-// Use a proxy
 GitHubCalendar(".calendar", "LawnShogan", {
-   proxy (LawnShogan) {
-     return fetch(`https://github.com/lawnshogan`)
-   }
-}).then(r => r.text())
+  proxy: function(username) {
+    return fetch(`https://cors-anywhere.herokuapp.com/https://github.com/${LawnShogan}`)
+  }
+}).then(function(response) {
+  return response.text();
+}).then(function(html) {
+  console.log(html);
+}).catch(function(error) {
+  console.error(error);
+});
